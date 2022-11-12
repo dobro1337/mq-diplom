@@ -1,4 +1,4 @@
-@font-face {
+  @font-face {
     font-family: "Open Sans";
     src: url("fonts/OpenSans-Regular.woff") format("woff");
     font-weight: regular;
@@ -14,6 +14,7 @@
     margin: 0;
     padding: 0;
     position: relative;
+    width: 100%;
   }
   
   ul {
@@ -58,6 +59,9 @@
   .logo {
     width: 179px;
     height: 41px;
+  }
+  .logo-mobile {
+    display: none;
   }
 
   .menu-list {
@@ -108,7 +112,6 @@
   
   .hamburger-icon {
       margin: 0;
-      padding: 19px 16px;
       display: none;
    
   }
@@ -130,7 +133,9 @@
       background-image: url("../images/banner-bg-tablet.jpg");
 
     }
-    
+    .intro {
+      width:80%;
+    }
     .header-container {
       width: 100%;
       padding: 50px 35px 0px 35px;
@@ -146,6 +151,50 @@
 
     .hamburger-icon {
       display: inline-block;
+    }
+
+  }
+
+  /* телефон */
+  @media (max-width: 640px){
+    .header {
+      max-width: 640px;
+      background-image: url("../images/banner-mobile.jpg");
+
+    }
+    .logo {
+      display: none;
+    }
+
+    .logo-mobile {
+      display: block;
+      width:81.8%;
+      margin: 180px auto 0 auto;
+    }
+
+    .intro {
+      width:80%;
+      margin: 45px auto auto auto;
+      padding: 0 0 220px 0;
+    }
+    .header-container {
+      width: 100%;
+      padding: 30px 15px 0px 15px;
+      justify-content: flex-end;
+    }
+
+    .title {
+      font-size: 26px;
+      line-height: normal;
+    }
+    
+    .menu {
+      display: none;
+    }
+
+    .hamburger-icon {
+      display: inline-block;
+      align-self: end;
     }
 
   }
@@ -272,7 +321,7 @@
     .container-content {
      
       flex-wrap: nowrap;
-      
+      padding-bottom: 44px;
     }
     .picture-post {
       width: 100%;
@@ -296,6 +345,43 @@
     }
   }
 
+    /* телефон */
+    @media (max-width: 640px)
+    {
+      .post {
+        flex-direction: column;
+        margin-bottom: 34px;
+      }
+      .post:last-child {
+        margin-bottom: 44px;
+      }
+      .container-content {
+       
+        flex-wrap: nowrap;
+        flex-direction: column;
+        padding-bottom: 44px;
+      }
+      .picture-post {
+        width: 100%;
+      }
+      .main-content {
+        margin-right: 35px;
+      }
+  
+      .frame {
+        margin-left: 0;
+        margin-top: 15px;
+      }
+      .post::after {
+          content: "";
+          display: block;
+          margin-top: 23px;
+          margin-bottom: 40px;
+          width: 100%;
+          height: 3px;
+          background-color: #eeeeee;
+      }
+    }
   /* side-bar */
   /* новые посты */
   .last-posts {
@@ -545,6 +631,54 @@
     color: #b59f5b;
   }
   
+  @media (max-width:640px) {
+    .last-posts {
+      width: 100%;
+      margin-bottom: 44px;
+    }
+    .search-form {
+      width: 100%;
+    }
+    .search-box {
+      width: 100%;
+    }
+    .field-search {
+      width: calc(100% - 48px);
+    }
+
+    .subscribe {
+      width: 100%;
+      margin-bottom: 44px;
+    }
+    .subscribe-form
+    {
+      width: 100%;
+    }
+    .subscribe-box {
+      width: 100%;
+    }
+    .field-subscribe{
+      width: 100%;
+    }
+    .button-subscribe {
+      width: 100%;
+    }
+
+    .tags {
+      width: 100%;
+      margin-bottom: 44px;
+    }
+
+    .categories {
+      width: 100%;
+      margin-bottom: 0;
+    }
+    .topic {
+      width: 100%;
+    }
+
+  }
+
   /* подвал */
   .footer {
     width: 100%;
@@ -717,6 +851,18 @@
   }
 }
 
+/* телефон */
+@media (max-width: 640px)
+{
+  .product {
+    width: calc(100%);
+  }
+  .product:nth-child(4n+4), .product:nth-child(4n+3)
+  {
+    margin-top: 28px;
+  }
+}
+
 /* Сейчас в тренде*/
 .trends {
   width: 100%;
@@ -806,7 +952,7 @@
 
 .trend-items {
   width: 100%;
-  box-sizing:content-box;
+  box-sizing:border-box;
   border: 4px solid #b59f5b;
   padding: 40px 42px 32px 35px;
   
@@ -830,6 +976,36 @@
  
 }
 
+/* телефон */
+@media (orientation: portrait) and (max-width: 640px)
+{
+  .trend {
+    width: 100%;
+    margin:0;
+  }
+
+  .title-trend {
+    font-size: 16px;
+  }
+
+  .trend:nth-child(n+2)
+  {
+    margin-top: 4px;
+  }
+}
+
+@media (orientation: landscape) and (max-width: 641px)
+{
+  .trend {
+    width: calc(50% - 4px);
+    margin-right:0;
+  }
+
+  .trend:nth-child(odd)
+  {
+    margin-right: 4px;
+  }
+}
 
 /* попап */
 
@@ -986,4 +1162,35 @@
 
 .Button-popup:checked ~ .visually-hidden{
   clip: auto;
+}
+
+/* телефон попап */
+@media (max-width: 640px)
+{
+  .popup-content {
+    padding: 23px 20px;
+    width: 80%;
+    min-width: 0;
+  }
+  .form {
+    margin-bottom: 25px;
+  }
+  .text-message {
+    min-height: 0;
+  }
+ .question-select {
+  padding-top: 10px;
+  padding-bottom: 10px;
+  }
+  .send-button {
+    padding-top: 10px;
+  padding-bottom: 10px;
+  }
+
+  .title-feedback {
+    font-size: 16px;
+  }
+  .title-side::after {
+    margin: 10px auto 20px auto;
+  }
 }
