@@ -640,10 +640,10 @@
       width: 100%;
     }
     .search-box {
-      width: 100%;
+      width: calc(100% - 48px);
     }
     .field-search {
-      width: calc(100% - 48px);
+      width: 100%;
     }
 
     .subscribe {
