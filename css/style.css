@@ -1,7 +1,7 @@
   @font-face {
     font-family: "Open Sans";
     src: url("fonts/OpenSans-Regular.woff") format("woff");
-    font-weight: regular;
+    font-weight: normal;
   }
   
   @font-face {
@@ -79,7 +79,7 @@
   
   .menu-link {
     font-family: "Open Sans", sans-serif;
-    font-weight: regular;
+    font-weight: normal;
     text-transform: uppercase;
     font-size: 13px;
     color: white;
@@ -290,7 +290,7 @@
   .date {
     color: #888888;
     font-family: "Open Sans", sans-serif;
-    font-weight: regular;
+    font-weight: normal;
     font-size: 12px;
     margin-right: 15px;
   }
@@ -305,7 +305,7 @@
   /* параметры текста поста */
   .text-post {
     font-family: "Open Sans", sans-serif;
-    font-weight: regular;
+    font-weight: normal;
     font-size: 15px;
     line-height: 22px;
     color: #0f0d0e;
@@ -480,7 +480,7 @@
     background: #f4f7f6;
     font-size: 13px;
     font-family: "Open Sans", sans-serif;
-    font-weight: regular;
+    font-weight: normal;
   }
   
   .field-search:focus {
@@ -529,7 +529,7 @@
     background: #f4f7f6;
     font-size: 13px;
     font-family: "Open Sans", sans-serif;
-    font-weight: regular;
+    font-weight: normal;
   }
   
   .field-subscribe:focus {
@@ -727,8 +727,18 @@
     font-weight: bold;
     color: #999999;
   }
-
+/* планшет */
   @media (min-width: 641px) and (max-width: 1199px) {
+    .social {
+      margin-bottom: 48px;
+    }
+
+    .copyrights {
+      margin-bottom: 40px;
+    }
+  }
+/* телефон */
+  @media (max-width: 640px){
     .social {
       margin-bottom: 48px;
     }
@@ -793,7 +803,7 @@
 
 .product-text {
   font-family: "Open Sans", sans-serif;
-  font-weight: regular;
+  font-weight: normal;
   font-size: 14px;
 }
 
@@ -1054,7 +1064,7 @@
   flex-direction: column;
   margin-bottom: 35px;
   font-family: "Open Sans", sans-serif;
-  font-weight: regular;
+  font-weight: normal;
   font-size: 13px;
 }
 
