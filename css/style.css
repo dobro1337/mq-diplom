@@ -27,7 +27,7 @@
     background-position: top;
     background-size: cover;
     background-color: #000;
-    z-index: 0;
+    z-index: 1;
     position: relative;
   }
   
@@ -867,7 +867,7 @@
   .product {
     width: calc(100%);
   }
-  .product:nth-child(n+2)
+  .product:nth-child(4n+4), .product:nth-child(4n+3)
   {
     margin-top: 28px;
   }
@@ -1029,6 +1029,8 @@
   z-index: 3;
   width: 100%;
   height: 100%;
+  left:0;
+  top:0;
   background-color: rgba(0,0,0,0.6);
   display: flex;
   justify-content: center;
@@ -1182,9 +1184,9 @@
 .popup-container {
   
   height: 20px;
-  position: absolute;
+  /* position: absolute; */
   z-index:15;
-  background-color: red;
+  /* background-color: red; */
 }
 .Button-popup {
   display: none;
@@ -1192,6 +1194,19 @@
 
 .Button-popup:checked ~ .visually-hidden{
   clip: auto;
+}
+
+.label-popup {
+  font-family: "Open Sans", sans-serif;
+  font-weight: normal;
+  text-transform: uppercase;
+  font-size: 13px;
+  color: white;
+  cursor:pointer;
+}
+
+.label-popup:hover {
+  text-decoration:underline;
 }
 
 /* телефон попап */
