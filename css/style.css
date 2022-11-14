@@ -111,10 +111,10 @@
   }
   
   .hamburger-icon {
-      margin: 0;
-      display: none;
-   
+    margin: 0;
+    display: none;
   }
+
   .hamburger-icon span {
       width: 40px;
       background-color: rgb(255, 255, 255);
@@ -145,7 +145,7 @@
       font-size: 40px;
     }
     
-    .menu {
+    .menu{
       display: none;
     }
 
@@ -192,7 +192,7 @@
       display: none;
     }
 
-    .hamburger-icon {
+    .hamburger-icon{
       display: inline-block;
       align-self: end;
     }
@@ -577,11 +577,13 @@
     color: #0f0d0e;
     text-transform: uppercase;
     background: white;
-    padding: 8px 14px 6px 13px;
-    margin: 0 5px 6px 1px;
+    padding: 7px 13px 7px 13px;
+    margin: 0 5px 6px 0px;
     border: 3px solid #eeeeee;
   }
-  
+  .ref-tag:last-child {
+    margin-right:0;
+  }
   .ref-tag:hover {
     border-color: #b59f5b;
     text-shadow: #0f0d0e 0 0 0;
@@ -867,7 +869,7 @@
   .product {
     width: calc(100%);
   }
-  .product:nth-child(4n+4), .product:nth-child(4n+3)
+  .product:nth-child(n+2)
   {
     margin-top: 28px;
   }
@@ -902,6 +904,10 @@
   z-index: 0;
   background-size: cover;
   
+}
+
+.trend:last-child {
+  margin-right: 0;
 }
 
 .trend-garden {
@@ -973,6 +979,9 @@
   .trend {
     width: calc(50% - 4px);
   }
+  .trend:nth-child(even){
+    margin-right:0;
+  }
   .title-trend {
     font-size: 17px;
   }
@@ -983,8 +992,11 @@
   .trend {
     width: calc(25% - 4px);
   }
+  .trend:last-child {
+    margin-right:0;
+  }
   .title-trend {
-    font-size: 17px;
+    font-size: 14px;
   }
   .tag-list {
     flex-direction: column;
@@ -1184,6 +1196,7 @@
 .popup-container {
   
   height: 20px;
+  margin-right: 35px;
   /* position: absolute; */
   z-index:15;
   /* background-color: red; */
@@ -1210,12 +1223,13 @@
 }
 
 /* телефон попап */
-@media (max-width: 640px)
+@media (max-width: 640px) , (max-height: 730px)
 {
   .popup-content {
     padding: 23px 20px;
     width: 80%;
     min-width: 0;
+    max-width: 450px;
   }
   .form {
     margin-bottom: 15px;
@@ -1238,4 +1252,15 @@
   .title-side::after {
     margin: 10px auto 20px auto;
   }
+}
+
+.menu-popup {
+  display: flex;
+  flex-wrap: wrap;
+}
+
+.elements-menu {
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
 }
